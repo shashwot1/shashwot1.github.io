@@ -1,3 +1,3 @@
 function showMessage() {
-  alert('sup');
+  alert('Tschüss');
 }
