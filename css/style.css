@@ -9,51 +9,11 @@ h1 {
   color: #ffffff;
 }
 
-p{
-  color: #ffffff;
-  position: fixed;
-  bottom: 0;
-  font-size: 75px;
-}
-#box1 {
-  background-color: #4a4341;
-  width: 500px;
-  border-radius: 5px;
-  margin: 5px;
-  padding: 5px;
-  text-align: center;
-  float: left;
+button{
+  width: 100px;
+  height: 50px;
 }
 
-img{
-  width: 99%;
-}
 
-#box2{
-  background-color: #4a4341;
-  width: 500px;
-  padding: 5px;
-  border-radius: 5px;
-  margin-right: 5px;
-  float: left;
-  text-align: center;
-}
 
-#box3{
-  background-color: #4a4341;
-  width: 500px;
-  border-radius: 5px;
-  margin: 5px;
-  padding: 5px;
-  float: left;
-  text-align: center;
-}
-
-#bottom{
-  background-color: #4a4341;
-  border-radius: 5px;
-  margin: 5px;
-  float: left;
-  text-align: center;
-}
 
