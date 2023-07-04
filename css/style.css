@@ -5,13 +5,16 @@ body {
   background-color: #2a2928;
 }
 
-h1 {
-  color: #ffffff;
+.red{
+  color: rgb(241, 36, 67);
 }
 
-button{
-  width: 100px;
-  height: 50px;
+.blue{
+  color: rgb(41, 229, 243);
+}
+
+.green{
+  color: rgb(91, 243, 80);
 }
 
 
