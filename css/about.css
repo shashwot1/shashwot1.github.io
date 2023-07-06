@@ -1,0 +1,13 @@
+.about{
+    display: flex;
+    /* background-color: red; */
+}
+
+.about__img{
+    border-radius: 50px;
+    width: 500px;
+}
+
+.about__content{
+    flex: 1;
+}

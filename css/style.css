@@ -4,6 +4,9 @@ body {
   padding: 20px;
   background-color: #2a2928;
 }
+.container{
+  color: white;
+}
 
 .red{
   color: rgb(241, 36, 67);

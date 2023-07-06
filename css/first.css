@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     gap: 5px;
+    /* background-color:aqua; */
 }
 
 .first__img {
@@ -11,13 +12,13 @@
     width: 500px;
 }
 
-.first__h {
+/* .first__h {
     color: white;
 }
 
 .first__p {
     color: white;
-}
+} */
 
 .first__btn {
     width: 100px;
