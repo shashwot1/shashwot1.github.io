@@ -7,6 +7,8 @@
   <link rel="stylesheet" type="text/css" href="css/header.css" />
   <link rel="stylesheet" type="text/css" href="css/first.css" />
   <link rel="stylesheet" type="text/css" href="css/about.css" />
+  <link rel="stylesheet" type="text/css" href="css/lol.css" />
+  
 </head>
 
 <body>
@@ -46,6 +48,7 @@
       </p>
       <div id="bottom">
         <button class="first__btn" onclick="showMessage()">Click Me</button>
+        <script src="js/script.js"></script>
       </div>
 
 
@@ -65,8 +68,28 @@
       </div>
 
     </section>
+    <hr>
+    <section id="lol" class="lol">
+      
+      <div class="canvas_container">
+        <canvas id="canvas" width="1000" height="500"> </canvas>
+      </div>
+      
+      <div class="c">
+        <button class="canvas__button" onclick="circle()">
+          draw red circle
+        </button>
+        <button class="canvas__button" onclick="blue()">
+          draw blue cirlce
+        </button>
+      </div>
+      
+      <script src="js/canvas.js"></script>
+
+    </section>
+
   </main>
-  <script src="js/script.js"></script>
+
 </body>
 
 </html>
