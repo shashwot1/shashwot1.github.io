@@ -28,7 +28,6 @@ function blue(){
     context.beginPath();
     context.arc(500, 250, value, 0, 2 * Math.PI);
     context.stroke();
-   
 }
 
 
