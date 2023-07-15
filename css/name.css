@@ -1,0 +1,24 @@
+.list{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    font-size: 200px;
+}
+
+.list li{
+    user-select: none;
+}
+
+.link{
+    text-decoration: none;
+    color: black;
+    transition: 0.1s color;
+}
+
+.link:hover{
+    color: white;
+}
