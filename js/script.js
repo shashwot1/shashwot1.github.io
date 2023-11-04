@@ -1,5 +1,0 @@
-function showMessage() {
-  alert('Tschüss');
-}
-
-
