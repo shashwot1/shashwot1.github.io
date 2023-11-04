@@ -2,9 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://shashwot.com/categories/</loc>
+    <loc>https://shashwot.com/pages/about/</loc>
+    <lastmod>2023-11-04T13:24:11+05:45</lastmod>
+  </url><url>
+    <loc>https://shashwot.com/pages/</loc>
+    <lastmod>2023-11-04T13:24:11+05:45</lastmod>
   </url><url>
     <loc>https://shashwot.com/</loc>
+    <lastmod>2023-11-04T13:24:11+05:45</lastmod>
+  </url><url>
+    <loc>https://shashwot.com/posts/</loc>
+    <lastmod>2023-11-04T13:24:03+05:45</lastmod>
+  </url><url>
+    <loc>https://shashwot.com/posts/first/</loc>
+    <lastmod>2023-11-04T13:24:03+05:45</lastmod>
+  </url><url>
+    <loc>https://shashwot.com/categories/</loc>
   </url><url>
     <loc>https://shashwot.com/tags/</loc>
   </url>
