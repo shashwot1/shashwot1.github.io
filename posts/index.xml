@@ -6,7 +6,19 @@
     <description>Recent content in Posts on Shashwot</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 04 Nov 2023 13:24:03 +0545</lastBuildDate><atom:link href="https://shashwot.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Nov 2023 10:38:28 +0545</lastBuildDate><atom:link href="https://shashwot.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Creating a Sierpinski Curve in Desmos</title>
+      <link>https://shashwot.com/posts/desmos/</link>
+      <pubDate>Tue, 07 Nov 2023 10:38:28 +0545</pubDate>
+      
+      <guid>https://shashwot.com/posts/desmos/</guid>
+      
+      <description>This guide will walk you through the process of creating an Arrowhead Sierpinski Curve in Desmos.
+Prerequisite Creating Points Passing points as a parameter Piecewise function Lists Action Sierpiński Curve Sierpiński Curve Iterations Creating the sequence in Desmos plot the points Final result Prerequisite Creating Points To define a point in Desmos, use Parentheses (): A = (3,4). Access the x-coordinate of a point with A.x and the y-coordinate with A.</description>
+      
+    </item>
+    
     <item>
       <title>Test</title>
       <link>https://shashwot.com/posts/first/</link>

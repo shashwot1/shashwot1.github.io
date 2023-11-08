@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en-us"><head><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">Creating a Sierpinski Curve in Desmos | Shashwot</title>
+<meta property="og:title" content="Creating a Sierpinski Curve in Desmos | Shashwot" />
+<meta name="twitter:title" content="Creating a Sierpinski Curve in Desmos | Shashwot" />
+<meta itemprop="name" content="Creating a Sierpinski Curve in Desmos | Shashwot" />
+<meta name="application-name" content="Creating a Sierpinski Curve in Desmos | Shashwot" />
+<meta property="og:site_name" content="Shashwot" />
+
+<meta name="description" content="Hello">
+<meta itemprop="description" content="Hello" />
+<meta property="og:description" content="Hello" />
+<meta name="twitter:description" content="Hello" />
+
+<meta property="og:locale" content="en-us" />
+<meta name="language" content="en-us" />
+
+
+
+  <meta itemprop="image" content="https://shashwot.com" />
+  <meta property="og:image" content="https://shashwot.com" />
+  <meta name="twitter:image" content="https://shashwot.com" />
+  <meta name="twitter:image:src" content="https://shashwot.com" />
+
+
+
+
+    
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2023-11-07T10:38:28&#43;0545 />
+    <meta property="article:published_time" content=2023-11-07T10:38:28&#43;0545 />
+
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "Creating a Sierpinski Curve in Desmos",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2023-11-07",
+        "description": "",
+        "wordCount":  968 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2023-11-07",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Shashwot"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.120.3">
+
+    
+
+    <link rel="canonical" href="https://shashwot.com/posts/desmos/">
+    <link href="/style.min.9bd04d0fad85388343088ec85e9afd787ea003e72914d7f57df39c17ab2e7173.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="https://shashwot.com/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"
+    integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous" />
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"
+    integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4"
+    crossorigin="anonymous"></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"
+    integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false}
+      ]
+    });"></script>
+
+    </head>
+<body data-theme = "dark" class="notransition">
+
+<script src="/js/theme.min.8961c317c5b88b953fe27525839672c9343f1058ab044696ca225656c8ba2ab0.js" integrity="sha256-iWHDF8W4i5U/4nUlg5ZyyTQ/EFirBEaWyiJWVsi6KrA="></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="https://shashwot.com/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title></title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/posts/">
+                        Posts
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/pages/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">Creating a Sierpinski Curve in Desmos</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2023-11-07T10:38:28&#43;05:45" itemprop="datePublished"> Nov 7, 2023 </time>
+                </div>
+                
+            </header><div class="page-content">
+                <p>This guide will walk you through the process of creating an Arrowhead Sierpinski Curve in Desmos.</p>
+<ul>
+<li><a href="#prerequisite">Prerequisite</a>
+<ul>
+<li><a href="#creating-points">Creating Points</a></li>
+<li><a href="#passing-points-as-a-parameter">Passing points as a parameter</a></li>
+<li><a href="#piecewise-function">Piecewise function</a></li>
+<li><a href="#lists">Lists</a></li>
+<li><a href="#action">Action</a></li>
+</ul>
+</li>
+<li><a href="#sierpi%C5%84ski-curve">Sierpiński Curve</a></li>
+<li><a href="#sierpi%C5%84ski-curve-iterations">Sierpiński Curve Iterations</a></li>
+<li><a href="#creating-the-sequence-in-desmos">Creating the sequence in Desmos</a></li>
+<li><a href="#plot-the-points">plot the points</a></li>
+<li><a href="#final-result">Final result</a></li>
+</ul>
+<h2 id="prerequisite">Prerequisite</h2>
+<h3 id="creating-points">Creating Points</h3>
+<ul>
+<li>To define a point in Desmos, use Parentheses <code>()</code>: <code>A = (3,4)</code>.</li>
+<li>Access the x-coordinate of a point with <code>A.x</code> and the y-coordinate with <code>A.y</code>.</li>
+</ul>
+<p><img src="images/point.jpg" alt="Image here"></p>
+<h3 id="passing-points-as-a-parameter">Passing points as a parameter</h3>
+<p><img src="images/function.jpg" alt="Image here"></p>
+<h3 id="piecewise-function">Piecewise function</h3>
+<p>A piecewise function is typically expressed in the following form in desmos:
+$$ f(x)= \lbrace condition1:expression1, condition2:expression2,\ldots,conditionN:expressionN \rbrace $$
+Example:</p>
+<p><img src="images/piece.jpg" alt="Image here"></p>
+<h3 id="lists">Lists</h3>
+<p>To create a list, you can use square brackets, like <code>[1, 2, 3, 4, 5]</code>.
+You can assign a list to a variable. This allows you to access the list&rsquo;s elements. Indexing in desmos list starts from 1 not 0.</p>
+<p><img src="images/list.jpg" alt="Image here"></p>
+<p>You can create a list of coordinates in the form <code>[(2, 3), (3, 3)]</code>, and you can assign this list to a variable. Once the list is assigned to a variable, you can access the individual coordinates within the list using that variable. You can use the variable to access specific points within the list and their individual x and y coordinates as needed for various mathematical operations and graphing purposes.</p>
+<p><img src="images/clist.jpg" alt="Image here"></p>
+<h3 id="action">Action</h3>
+<p>Desmos Action is the key to making your graph interactive.</p>
+<p><img src="images/action.jpg" alt="Image here"></p>
+<p>This is a simple action setup:</p>
+<ul>
+<li>Start by adding the last two elements of the list. In this case, 0 + 1 = 1.</li>
+<li>Next, join the list with this sum. This operation results in a new list, [0, 0, 1, 1].</li>
+<li>Finally, set the value of variable $a_1$ to this combined list.</li>
+</ul>
+<p>This action is evaluated every time the arrow is clicked.</p>
+<p><img src="images/action.gif" alt="Image here"></p>
+<h2 id="sierpiński-curve">Sierpiński Curve</h2>
+<p>The Sierpiński arrowhead curve is a fractal pattern. You can create this pattern using two substituting production rules: (A → B-A-B) and (B → A+B+A). The symbols + and - denote turning 60 degrees either to the left or right.
+Follow these step-by-step instructions to draw the Sierpiński arrowhead curve:</p>
+<ol>
+<li>
+<p>Start with a straight line segment, representing the initial axiom, A.</p>
+</li>
+<li>
+<p>Apply the following rules iteratively to create the fractal pattern:</p>
+<ul>
+<li>Replace each &lsquo;A&rsquo; with &lsquo;B-A-B&rsquo;.</li>
+<li>Replace each &lsquo;B&rsquo; with &lsquo;A+B+A&rsquo;.</li>
+</ul>
+</li>
+<li>
+<p>After applying the rules, your drawing will consist of a sequence of A and B symbols.</p>
+</li>
+<li>
+<p>Translate the symbols into actions as follows:</p>
+<ul>
+<li>&lsquo;A&rsquo; or &lsquo;B&rsquo;: Draw a line segment.</li>
+<li>&lsquo;+&rsquo;: Turn 60 degrees to the left.</li>
+<li>&lsquo;-&rsquo;: Turn 60 degrees to the right.</li>
+</ul>
+</li>
+</ol>
+<h2 id="sierpiński-curve-iterations">Sierpiński Curve Iterations</h2>
+<p><strong>Initial Axiom:</strong> A</p>
+<p><strong>1st Iteration:</strong></p>
+<ul>
+<li>Apply the rules:
+<ul>
+<li>A → B-A-B</li>
+<li>B → A+B+A</li>
+</ul>
+</li>
+<li>Result after the 1st iteration: B-A-B</li>
+</ul>
+<p><strong>2nd Iteration:</strong></p>
+<ul>
+<li>Apply the rules to the result of the 1st iteration:
+<ul>
+<li>B → A+B+A</li>
+<li>A → B-A-B</li>
+<li>B → A+B+A</li>
+</ul>
+</li>
+<li>Result after the 2nd iteration: A+B+A-B-A-B+A+B+A</li>
+</ul>
+<p><strong>3rd Iteration:</strong></p>
+<ul>
+<li>Apply the rules to the result of the 2nd iteration:
+<ul>
+<li>A → B-A-B</li>
+<li>B → A+B+A</li>
+<li>A → B-A-B</li>
+<li>B → A+B+A</li>
+<li>A → B-A-B</li>
+<li>B → A+B+A</li>
+<li>A → B-A-B</li>
+<li>B → A+B+A</li>
+<li>A → B-A-B</li>
+</ul>
+</li>
+<li>Result after the 3rd iteration: B-A-B+A+B+A-B-A-B+A+B+A-B-A-B+A+B+A-B-A-B</li>
+</ul>
+<h2 id="creating-the-sequence-in-desmos">Creating the sequence in Desmos</h2>
+<p>For creating this sequence, we utilize numbers in place of letters, representing them with &lsquo;1&rsquo; for &lsquo;A&rsquo; and &lsquo;2&rsquo; for &lsquo;B&rsquo;. To start, we establish four distinct lists:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>A = [2, -1, 2]  
+</span></span><span style="display:flex;"><span>B = [1, 2, 1]  
+</span></span><span style="display:flex;"><span>A_1  = [-2, -1, 2] (to be used when &#39;1&#39; is negative)  
+</span></span><span style="display:flex;"><span>B_1  = [1, 2, 1] (to be used when &#39;2&#39; is negative)
+</span></span></code></pre></div><p>Next, we create two additional lists:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span> a_rray1: [1]
+</span></span><span style="display:flex;"><span> a_rray2: [] 
+</span></span></code></pre></div><p>we implement an action that involves the examination of each element within $a_{rray1}$ and its corresponding interaction with $a_{rray2}$, based on specific conditions. These conditions dictate which of the four lists we created at the beginning will be joined with $a_{rray2}$. The value of $n$ is incremented each time the action is called.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>For each element a_rray1:
+</span></span><span style="display:flex;"><span>  If a_rray1[n] equals 1:
+</span></span><span style="display:flex;"><span>    Join a_rray2 with list A
+</span></span><span style="display:flex;"><span>  Else if a_rray1[n] equals -1:
+</span></span><span style="display:flex;"><span>    Join a_rray2 with list A_1
+</span></span><span style="display:flex;"><span>  Else if a_rray1[n] equals 2:
+</span></span><span style="display:flex;"><span>    Join a_rray2 with list B
+</span></span><span style="display:flex;"><span>  Else if a_rray1[n] equals -2:
+</span></span><span style="display:flex;"><span>    Join a_rray2 with list B_1 
+</span></span></code></pre></div><p>To restrict the number of times the first action can be called, we can use the inequality<br>
+$n \leq length(a_{rray1})$. Once this condition is no longer met, we move on to other actions in the sequence. we implement another action as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>Copy the elements from a_rray2 to a_rray1.
+</span></span><span style="display:flex;"><span>Clear a_rray2, effectively making it an empty list.
+</span></span><span style="display:flex;"><span>Set n to 1.
+</span></span></code></pre></div><p>Repeat the process for more iterations.</p>
+<p><img src="images/action2.jpg" alt="Image here"></p>
+<p><img src="images/list.gif" alt="Image here"></p>
+<h2 id="plot-the-points">plot the points</h2>
+<ul>
+<li>We start with a list of coordinates:
+<ul>
+<li>C = [(0, 0), (1, 0)]</li>
+</ul>
+</li>
+<li>Calculate a vector <code>V</code> that goes from the previous point to the current point: <code>V = C[l] - C[l-1]</code>.</li>
+<li>Create a function $f$ that takes a vector $v$ and an angle $\phi$ as parameters and returns a new point C[l] + v rotated by the angle $\phi$ . <code>i</code> is increased everytime the action is called.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>For each element in a_rray1:
+</span></span><span style="display:flex;"><span>  If a_rray1[i] less than 0:  
+</span></span><span style="display:flex;"><span>    join C with f(V,-60)
+</span></span><span style="display:flex;"><span>  Else if:
+</span></span><span style="display:flex;"><span>    join C with f(V,60)
+</span></span></code></pre></div><p><img src="images/coordinate.jpg" alt="Image here"></p>
+<p>To ensure that our points are updated whenever $a_{rray1}$ changes, we can reset the variables i and C. To achieve this, simply reset i to 1 and the list of coordinates C to its initial state when we update $a_{rray1}$.</p>
+<p><img src="images/update.jpg" alt="Image here"></p>
+<p>You can simplify the process by using a ticker. Just assign an action to a variable, and then refer to it in the ticker using the variable name. This method automates the action calls, eliminating the need to manually click the arrow every time an action is to be executed.</p>
+<p><img src="images/ticker.jpg" alt="Image here"></p>
+<h2 id="final-result">Final result</h2>
+<p><img src="images/video.gif" alt="Image here"></p>
+<p>Here is the <a href="https://www.desmos.com/calculator/2umnru4q9y">link</a> to desmos file</p>
+<p>I want to say a big thank you for reading my first blog post, and I appreciate your patience with any imperfections. Thank you for being a part of this journey.</p>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+</div>
+    <small class="footer_copyright">
+        © 2023 Shashwot Mishra.
+        
+    </small>
+</footer><a href="#" title="" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+
+
+    
+    <script src="https://shashwot.com/js/main.min.35f435a5d8eac613c52daa28d8af544a4512337d3e95236e4a4978417b8dcb2f.js" integrity="sha256-NfQ1pdjqxhPFLaoo2K9USkUSM30&#43;lSNuSkl4QXuNyy8="></script>
+
+    
+
+</body>
+</html>
