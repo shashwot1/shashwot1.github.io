@@ -3,11 +3,11 @@
 <meta http-equiv="content-type" content="text/html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title itemprop="name">Posts | Shashwot</title>
-<meta property="og:title" content="Posts | Shashwot" />
-<meta name="twitter:title" content="Posts | Shashwot" />
-<meta itemprop="name" content="Posts | Shashwot" />
-<meta name="application-name" content="Posts | Shashwot" />
+<title itemprop="name">Unveiling the Magic: Visualizing Matrix Transformations | Shashwot</title>
+<meta property="og:title" content="Unveiling the Magic: Visualizing Matrix Transformations | Shashwot" />
+<meta name="twitter:title" content="Unveiling the Magic: Visualizing Matrix Transformations | Shashwot" />
+<meta itemprop="name" content="Unveiling the Magic: Visualizing Matrix Transformations | Shashwot" />
+<meta name="application-name" content="Unveiling the Magic: Visualizing Matrix Transformations | Shashwot" />
 <meta property="og:site_name" content="Shashwot" />
 
 <meta name="description" content="Hello">
@@ -32,11 +32,6 @@
     
     
     
-    <link rel="first" href="/posts/" />
-    <link rel="last" href="/posts/" />
-    
-    
-    
 
     <meta property="og:type" content="article" />
     <meta property="og:article:published_time" content=2023-12-04T12:17:14&#43;0545 />
@@ -50,14 +45,14 @@
     {
         "@context": "http://schema.org",
         "@type": "Article",
-        "headline": "Posts",
+        "headline": "Unveiling the Magic: Visualizing Matrix Transformations",
         "author": {
         "@type": "Person",
         "name": ""
         },
         "datePublished": "2023-12-04",
         "description": "",
-        "wordCount":  0 ,
+        "wordCount":  405 ,
         "mainEntityOfPage": "True",
         "dateModified": "2023-12-04",
         "image": {
@@ -76,9 +71,7 @@
 
     
 
-    <link rel="canonical" href="https://shashwot.com/posts/">
-    <link href="/posts/index.xml" rel="alternate" type="application/rss+xml" title="Shashwot">
-    <link href="/posts/index.xml" rel="feed" type="application/rss+xml" title="Shashwot">
+    <link rel="canonical" href="https://shashwot.com/posts/desmos-2/">
     <link href="/style.min.9bd04d0fad85388343088ec85e9afd787ea003e72914d7f57df39c17ab2e7173.css" rel="stylesheet">
     <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
 
@@ -181,71 +174,47 @@ stroke-linejoin="round" class="feather feather-home">
         </div>
     </nav>
 </div>
-<div class="wrapper list-page">
-    <header class="header">
-        <h1 class="header-title center">Posts</h1>
-    </header>
+
+<div class="wrapper post">
     <main class="page-content" aria-label="Content">
-        
-        
-        <h2 class="post-year">2023</h2>
+        <article>
+            <header class="header">
+                <h1 class="header-title">Unveiling the Magic: Visualizing Matrix Transformations</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2023-12-04T12:17:14&#43;05:45" itemprop="datePublished"> Dec 4, 2023 </time>
+                </div>
+                
+            </header><div class="page-content">
+                <p>Understanding matrix transformations might seem daunting, especially if you&rsquo;re not familiar with the world of mathematics. However, they are a crucial concept in many fields, including computer graphics, physics, and machine learning. By visualizing matrix transformations, we can better comprehend the seemingly complicated operations and uncover the magic behind how matrices manipulate and reshape data. The purpose of this blog post is to demonstrate simple transformations using Desmos for visualization.</p>
+<p><img src="images/transform.gif" alt="image here"></p>
+<h2 id="creating-the-grid">Creating the Grid</h2>
+<p>To create a grid, we can use a parametric equation. Suppose we want to create a 2 by 2 grid. In that case, we need to keep the value of $y$ constant while letting $x$ range from -2 to 2, and vice versa. We can generalize the equation to cover a wider range of values, where $x$ ranges from $-s$ to $s$ when $t$ goes from 0 to 1. The equation is $$-s(1-t)+st $$  $$ = (2t-1)s$$ If we set $t$ to 0, the equation returns $-s$. On the other hand, if we set $t$ to 1, the equation returns $s$. We can assign values to $y$ that range from negative s to positive s, $y=[-s,\cdots,s]$.</p>
+<p><img src="images/graph.jpg" alt="image here"></p>
+<p>By setting the value of s=n, we can create a grid with n rows and n columns.Also, you can use the list [-s,-s+i,&hellip;,s] to draw lines after increment i.</p>
+<p><img src="images/graph2.jpg" alt="image here"></p>
+<p>We can now create a function to generate a grid and call it whenever needed.</p>
+<p><img src="images/graph3.jpg" alt="image here"></p>
+<h2 id="transformations">Transformations</h2>
+<p><img src="images/matrix.jpg" alt="image here"></p>
+<p>The above picture illustrates matrix multiplication.We can create a function in Desmos to perform a 2D matrix multiplication. This function will take columns of the matrix and a point as parameters. The output of the function will be the transformed result of the matrix multiplication.</p>
+<p><img src="images/matrix2.jpg" alt="image here"></p>
+<p>Now, instead of a point as the input, we can use grid. Remember to assign the grid to a variable to simplify the process.</p>
+<p><img src="images/graph4.jpg" alt="image here"></p>
+<p>Now, for the transformation part, it&rsquo;s quite simple and might just surprise you. Let&rsquo;s name our starting grid as $X$ and the transformed grid as $X_1$. To move from $X$ to $X_1$,&quot; we use the formula: $$ X(1−t_1)+X_1t_1​ $$
+Here, $t_1$ ranges from 0 to 1, covering the entire transformation process. I believe there&rsquo;s no need to explain how this works.</p>
+<p><img src="images/transform2.gif" alt="image here"></p>
+<p>Now that you know how to create a grid in Desmos, you can explore numerous possibilities. Here are some Desmos links—give them a try yourself and enjoy! Thank you for reading this blog.</p>
+<p><a href="https://www.desmos.com/calculator/ezepbn2qvw">First gif</a></p>
+<p><a href="https://www.desmos.com/calculator/scefxvqyof">change basis</a></p>
+<p><a href="https://www.desmos.com/calculator/zj2hay8a3s">$z^2$ transformation</a></p>
+<p><a href="https://www.desmos.com/calculator/6hrgzwjwgm">fun transformation</a></p>
 
-        
-
-        
-
-        <article class="post-item">
-    <h4 class="post-item-title">
-        <a href="/posts/desmos-2/">Unveiling the Magic: Visualizing Matrix Transformations</a>
-    </h4>
-    
-    
-    
-    <time class="post-item-meta" datetime="2023-12-04T12:17:14&#43;0545">
-        4 Dec 2023
-        
-    </time>
-</article>
-
-
-        
-
-        <article class="post-item">
-    <h4 class="post-item-title">
-        <a href="/posts/desmos/">Creating a Sierpinski Curve in Desmos</a>
-    </h4>
-    
-    
-    
-    <time class="post-item-meta" datetime="2023-11-07T10:38:28&#43;0545">
-        7 Nov 2023
-        
-    </time>
-</article>
-
-
-        
-
-        <article class="post-item">
-    <h4 class="post-item-title">
-        <a href="/posts/first/">Test</a>
-    </h4>
-    
-    
-    
-    <time class="post-item-meta" datetime="2023-11-04T13:24:03&#43;0545">
-        4 Nov 2023
-        
-    </time>
-</article>
-
-
-         
-
-         
-
-    </main>
-</div><footer class="footer">
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
     <span class="footer_item"> </span>
     &nbsp;
 
